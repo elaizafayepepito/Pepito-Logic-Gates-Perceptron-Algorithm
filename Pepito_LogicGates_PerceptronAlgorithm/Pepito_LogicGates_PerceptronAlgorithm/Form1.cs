@@ -81,8 +81,7 @@ namespace Pepito_LogicGates_PerceptronAlgorithm
             bias = -0.5;
             // apply perceptron algorithm
             double[] inputs = new double[2];
-            if (double.TryParse(num1.Text, out double input1) &&
-                double.TryParse(num2.Text, out double input2))
+            if (double.TryParse(num1.Text, out double input1) && double.TryParse(num2.Text, out double input2))
             {
                 inputs[0] = input1;
                 inputs[1] = input2;
@@ -122,8 +121,7 @@ namespace Pepito_LogicGates_PerceptronAlgorithm
             weights[0, 1] = -0.5;
             bias = -0.5;
             double[] inputs = new double[2];
-            if (double.TryParse(num1.Text, out double input1) &&
-                double.TryParse(num1.Text, out double input2))
+            if (double.TryParse(num1.Text, out double input1) && double.TryParse(num1.Text, out double input2))
             {
                 inputs[0] = input1;
                 inputs[1] = input2;
