@@ -102,6 +102,7 @@
             this.buttonAnd.TabIndex = 7;
             this.buttonAnd.Text = "AND";
             this.buttonAnd.UseVisualStyleBackColor = false;
+            this.buttonAnd.Click += new System.EventHandler(this.buttonAnd_Click);
             // 
             // buttonXor
             // 

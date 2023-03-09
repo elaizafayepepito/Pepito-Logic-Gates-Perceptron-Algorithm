@@ -20,8 +20,7 @@ namespace Pepito_LogicGates_PerceptronAlgorithm
             weights[0, 1] = 0.5;
             bias = -0.5;
             double[] inputs = new double[2];
-            if (double.TryParse(num1.Text, out double input1) &&
-                double.TryParse(num2.Text, out double input2))
+            if (double.TryParse(num1.Text, out double input1) && double.TryParse(num2.Text, out double input2))
             {
                 inputs[0] = input1;
                 inputs[1] = input2;
@@ -34,7 +33,26 @@ namespace Pepito_LogicGates_PerceptronAlgorithm
             }
         }
 
-        // Binary classification
+        private void buttonAnd_Click(object sender, EventArgs e)
+        {
+            // set weights and bias value
+            weights[0, 0] = 0.5;
+            weights[0, 1] = 0.5;
+            bias = -1;
+            double[] inputs = new double[2];
+            if (double.TryParse(num1.Text, out double input1) && double.TryParse(num2.Text, out double input2))
+            {
+                inputs[0] = input1;
+                inputs[1] = input2;
+                double calculatedOutput = CalculateOutput(inputs, weights, bias);
+                output.Text = calculatedOutput.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Invalid input.");
+            }
+        }
+
         private double CalculateOutput(double[] inputs, double[,] weights, double bias)
         {
             double sum = 0;
@@ -44,8 +62,6 @@ namespace Pepito_LogicGates_PerceptronAlgorithm
             }
             sum += bias;
             double output = (sum >= 0) ? 1 : 0;
-
-            // if output is incorrect update the weights 
             if (output != inputs[0])
             {
                 for (int i = 0; i < inputs.Length; i++)

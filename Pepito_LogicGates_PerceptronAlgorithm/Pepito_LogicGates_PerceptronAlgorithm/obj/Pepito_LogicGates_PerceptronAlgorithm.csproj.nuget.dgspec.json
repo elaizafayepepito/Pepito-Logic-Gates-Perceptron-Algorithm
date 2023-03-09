@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Elaiza Faye\\Desktop\\Intelligent Systems\\DIP-Activity-Part-2\\Pepito_LogicGates_PerceptronAlgorithm\\Pepito_LogicGates_PerceptronAlgorithm\\Pepito_LogicGates_PerceptronAlgorithm.csproj": {}
+    "C:\\Users\\Elaiza Faye\\Desktop\\Pepito-Logic-Gates-Perceptron-Algorithm\\Pepito_LogicGates_PerceptronAlgorithm\\Pepito_LogicGates_PerceptronAlgorithm\\Pepito_LogicGates_PerceptronAlgorithm.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Elaiza Faye\\Desktop\\Intelligent Systems\\DIP-Activity-Part-2\\Pepito_LogicGates_PerceptronAlgorithm\\Pepito_LogicGates_PerceptronAlgorithm\\Pepito_LogicGates_PerceptronAlgorithm.csproj": {
+    "C:\\Users\\Elaiza Faye\\Desktop\\Pepito-Logic-Gates-Perceptron-Algorithm\\Pepito_LogicGates_PerceptronAlgorithm\\Pepito_LogicGates_PerceptronAlgorithm\\Pepito_LogicGates_PerceptronAlgorithm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Elaiza Faye\\Desktop\\Intelligent Systems\\DIP-Activity-Part-2\\Pepito_LogicGates_PerceptronAlgorithm\\Pepito_LogicGates_PerceptronAlgorithm\\Pepito_LogicGates_PerceptronAlgorithm.csproj",
+        "projectUniqueName": "C:\\Users\\Elaiza Faye\\Desktop\\Pepito-Logic-Gates-Perceptron-Algorithm\\Pepito_LogicGates_PerceptronAlgorithm\\Pepito_LogicGates_PerceptronAlgorithm\\Pepito_LogicGates_PerceptronAlgorithm.csproj",
         "projectName": "Pepito_LogicGates_PerceptronAlgorithm",
-        "projectPath": "C:\\Users\\Elaiza Faye\\Desktop\\Intelligent Systems\\DIP-Activity-Part-2\\Pepito_LogicGates_PerceptronAlgorithm\\Pepito_LogicGates_PerceptronAlgorithm\\Pepito_LogicGates_PerceptronAlgorithm.csproj",
+        "projectPath": "C:\\Users\\Elaiza Faye\\Desktop\\Pepito-Logic-Gates-Perceptron-Algorithm\\Pepito_LogicGates_PerceptronAlgorithm\\Pepito_LogicGates_PerceptronAlgorithm\\Pepito_LogicGates_PerceptronAlgorithm.csproj",
         "packagesPath": "C:\\Users\\Elaiza Faye\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Elaiza Faye\\Desktop\\Intelligent Systems\\DIP-Activity-Part-2\\Pepito_LogicGates_PerceptronAlgorithm\\Pepito_LogicGates_PerceptronAlgorithm\\obj\\",
+        "outputPath": "C:\\Users\\Elaiza Faye\\Desktop\\Pepito-Logic-Gates-Perceptron-Algorithm\\Pepito_LogicGates_PerceptronAlgorithm\\Pepito_LogicGates_PerceptronAlgorithm\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Elaiza Faye\\AppData\\Roaming\\NuGet\\NuGet.Config",
