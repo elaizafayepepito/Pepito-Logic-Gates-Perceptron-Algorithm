@@ -25,7 +25,7 @@ namespace Pepito_LogicGates_PerceptronAlgorithm
                 inputs[0] = input1;
                 inputs[1] = input2;
                 double calculatedOutput = CalculateOutput(inputs, weights, bias);
-                output.Text = calculatedOutput.ToString();
+                outputOr.Text = calculatedOutput.ToString();
             }
             else
             {
@@ -45,7 +45,7 @@ namespace Pepito_LogicGates_PerceptronAlgorithm
                 inputs[0] = input1;
                 inputs[1] = input2;
                 double calculatedOutput = CalculateOutput(inputs, weights, bias);
-                output.Text = calculatedOutput.ToString();
+                outputAnd.Text = calculatedOutput.ToString();
             }
             else
             {
@@ -79,17 +79,19 @@ namespace Pepito_LogicGates_PerceptronAlgorithm
             weights[0, 0] = 0.5;
             weights[0, 1] = -0.5;
             bias = -0.5;
+            // apply perceptron algorithm
             double[] inputs = new double[2];
-            if (double.TryParse(num1.Text, out double input1) && double.TryParse(num2.Text, out double input2))
+            if (double.TryParse(num1.Text, out double input1) &&
+                double.TryParse(num2.Text, out double input2))
             {
                 inputs[0] = input1;
                 inputs[1] = input2;
                 double calculatedOutput = CalculateOutput(inputs, weights, bias);
-                output.Text = calculatedOutput.ToString();
+                outputXor.Text = calculatedOutput.ToString();
             }
             else
             {
-                MessageBox.Show("Invalid input");
+                MessageBox.Show("Invalid input.");
             }
         }
 
@@ -105,7 +107,7 @@ namespace Pepito_LogicGates_PerceptronAlgorithm
                 inputs[0] = input1;
                 inputs[1] = input2;
                 double calculatedOutput = CalculateOutput(inputs, weights, bias);
-                output.Text = calculatedOutput.ToString();
+                outputNand.Text = calculatedOutput.ToString();
             }
             else
             {
@@ -115,7 +117,7 @@ namespace Pepito_LogicGates_PerceptronAlgorithm
 
         private void buttonNor_Click(object sender, EventArgs e)
         {
-            // set weights for NOR gate
+            // set weights and bias value
             weights[0, 0] = -0.5;
             weights[0, 1] = -0.5;
             bias = -0.5;
@@ -126,11 +128,11 @@ namespace Pepito_LogicGates_PerceptronAlgorithm
                 inputs[0] = input1;
                 inputs[1] = input2;
                 double calculatedOutput = CalculateOutput(inputs, weights, bias);
-                output.Text = calculatedOutput.ToString();
+                outputNor.Text = calculatedOutput.ToString();
             }
             else
             {
-                MessageBox.Show("Invalid input. Please enter a numeric value.");
+                MessageBox.Show("Invalid input.");
             }
         }
     }
