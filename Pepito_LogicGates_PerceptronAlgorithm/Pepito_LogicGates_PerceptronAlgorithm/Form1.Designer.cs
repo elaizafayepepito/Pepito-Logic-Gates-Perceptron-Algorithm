@@ -138,6 +138,7 @@
             this.buttonNor.TabIndex = 10;
             this.buttonNor.Text = "NOR";
             this.buttonNor.UseVisualStyleBackColor = false;
+            this.buttonNor.Click += new System.EventHandler(this.buttonNor_Click);
             // 
             // label4
             // 

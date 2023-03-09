@@ -112,5 +112,26 @@ namespace Pepito_LogicGates_PerceptronAlgorithm
                 MessageBox.Show("Invalid input.");
             }
         }
+
+        private void buttonNor_Click(object sender, EventArgs e)
+        {
+            // set weights for NOR gate
+            weights[0, 0] = -0.5;
+            weights[0, 1] = -0.5;
+            bias = -0.5;
+            double[] inputs = new double[2];
+            if (double.TryParse(num1.Text, out double input1) &&
+                double.TryParse(num1.Text, out double input2))
+            {
+                inputs[0] = input1;
+                inputs[1] = input2;
+                double calculatedOutput = CalculateOutput(inputs, weights, bias);
+                output.Text = calculatedOutput.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Invalid input. Please enter a numeric value.");
+            }
+        }
     }
 }
