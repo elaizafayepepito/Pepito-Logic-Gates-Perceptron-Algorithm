@@ -72,5 +72,25 @@ namespace Pepito_LogicGates_PerceptronAlgorithm
             }
             return output;
         }
+
+        private void buttonXor_Click(object sender, EventArgs e)
+        {
+            // set weights and bias value
+            weights[0, 0] = 0.5;
+            weights[0, 1] = -0.5;
+            bias = -0.5;
+            double[] inputs = new double[2];
+            if (double.TryParse(num1.Text, out double input1) && double.TryParse(num2.Text, out double input2))
+            {
+                inputs[0] = input1;
+                inputs[1] = input2;
+                double calculatedOutput = CalculateOutput(inputs, weights, bias);
+                output.Text = calculatedOutput.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Invalid input.");
+            }
+        }
     }
 }

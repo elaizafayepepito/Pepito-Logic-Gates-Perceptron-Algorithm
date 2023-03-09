@@ -114,6 +114,7 @@
             this.buttonXor.TabIndex = 8;
             this.buttonXor.Text = "XOR";
             this.buttonXor.UseVisualStyleBackColor = false;
+            this.buttonXor.Click += new System.EventHandler(this.buttonXor_Click);
             // 
             // buttonNand
             // 

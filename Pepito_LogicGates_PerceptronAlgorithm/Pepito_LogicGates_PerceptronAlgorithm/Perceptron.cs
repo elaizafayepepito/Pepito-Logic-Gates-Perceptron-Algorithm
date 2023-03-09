@@ -8,15 +8,12 @@ namespace Pepito_LogicGates_PerceptronAlgorithm
 {
     internal class Perceptron
     {
-
-        // The learning rate for the Perceptron Algorithm
-        private double learningRate = 0.1;
-
         // The weights for the inputs
         private double[] weights;
-
         // The bias for the Perceptron
         private double bias;
+        // The learning rate for the Perceptron Algorithm
+        private double learningRate;
 
         // Constructor to initialize the weights and bias to random values
         public Perceptron(int numInputs)
@@ -30,68 +27,37 @@ namespace Pepito_LogicGates_PerceptronAlgorithm
             bias = rand.NextDouble();
         }
 
-        // The activation function for the Perceptron (returns 1 if the sum of the inputs
-        // and the bias is greater than 0, 0 otherwise)
-        private int Activation(double sum)
+        // The prediction function for the Perceptron
+        public int Predict(double[] inputs)
         {
-            if (sum > 0)
+            double weightedSum = 0;
+            for (int i = 0; i < inputs.Length; i++)
             {
-                return 1;
+                weightedSum += inputs[i] * weights[i];
             }
-            else
-            {
-                return 0;
-            }
+            weightedSum += bias;
+
+            return (weightedSum >= 0) ? 1 : -1;
         }
 
         // The training function for the Perceptron
-        public void Train(double[][] inputs, int[] outputs, int maxIterations)
+        public void Train(double[][] inputs, int[] labels, int numEpochs)
         {
-            int numInputs = inputs[0].Length;
-            int numSamples = outputs.Length;
-            int iteration = 0;
-            while (iteration < maxIterations)
+            for (int epoch = 0; epoch < numEpochs; epoch++)
             {
-                int numErrors = 0;
-                for (int i = 0; i < numSamples; i++)
+                for (int i = 0; i < inputs.Length; i++)
                 {
-                    double sum = bias;
-                    for (int j = 0; j < numInputs; j++)
-                    {
-                        sum += weights[j] * inputs[i][j];
-                    }
-                    int output = Activation(sum);
-                    int error = outputs[i] - output;
-                    if (error != 0)
-                    {
-                        numErrors++;
-                        for (int j = 0; j < numInputs; j++)
-                        {
-                            weights[j] += learningRate * error * inputs[i][j];
-                        }
-                        bias += learningRate * error;
-                    }
-                }
-                iteration++;
-                if (numErrors == 0)
-                {
-                    Console.WriteLine("Training completed after " + iteration + " iterations.");
-                    return;
-                }
-            }
-            Console.WriteLine("Training failed after " + maxIterations + " iterations.");
-        }
+                    double output = Predict(inputs[i]);
+                    double error = labels[i] - output;
 
-        // The prediction function for the Perceptron (returns 1 if the sum of the inputs
-        // and the bias is greater than 0, 0 otherwise)
-        public int Predict(double[] inputs)
-        {
-            double sum = bias;
-            for (int i = 0; i < inputs.Length; i++)
-            {
-                sum += weights[i] * inputs[i];
+                    // Update weights and bias
+                    for (int j = 0; j < weights.Length; j++)
+                    {
+                        weights[j] += learningRate * error * inputs[i][j];
+                    }
+                    bias += learningRate * error;
+                }
             }
-            return Activation(sum);
         }
     }
 
