@@ -126,6 +126,7 @@
             this.buttonNand.TabIndex = 9;
             this.buttonNand.Text = "NAND";
             this.buttonNand.UseVisualStyleBackColor = false;
+            this.buttonNand.Click += new System.EventHandler(this.buttonNand_Click);
             // 
             // buttonNor
             // 
